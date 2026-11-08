@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    image: api-tareas
+    container_name: api-tareas
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    environment:
+      APP_PORT: ${APP_PORT:-8000}
+    volumes:
+      # Persiste la base de datos SQLite entre reinicios del contenedor
+      - sqlite-data:/var/www/html/database/data
+
+volumes:
+  sqlite-data:

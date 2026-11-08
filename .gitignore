@@ -22,3 +22,7 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+*.docx
+
+# Base de datos SQLite (local y Docker)
+/database/data
